@@ -1,0 +1,325 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --primary-wave: #090909;
+  --secondary-wave: #909090;
+  --menu-color: 0, 0, 0;
+  --box-shadow-color: 0, 0, 0;
+}
+
+@font-face {
+  font-family: "agave Nerd Font";
+  src: url("/fonts/AgaveNerdFont-Regular.ttf") format("truetype");
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "agave Nerd Font Mono";
+  src: url("/fonts/AgaveNerdFontMono-Regular.ttf") format("truetype");
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: "agave Nerd Font" !important;
+  user-select: none !important;
+  font-size: 13pt;
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+h1,
+section {
+  margin-bottom: 50px;
+}
+
+section {
+  padding-top: 50px;
+  margin-bottom: 150px;
+}
+
+p {
+  margin: 1rem;
+  text-align: justify;
+}
+
+li {
+  margin-left: 1rem;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--secondary-color);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  opacity: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba(var(--menu-color), 0.7);
+  text-align: center;
+  vertical-align: center;
+  padding-top: 10px;
+  transition:
+    background-color 0.5s ease,
+    opacity 0.5s ease !important;
+}
+
+.menu button {
+  background-color: rgba(var(--menu-color), 0);
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+}
+
+.menu button:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.menu-icon {
+  font-family: "agave Nerd Font Mono" !important;
+  font-size: 22pt !important;
+}
+
+.menu-text {
+  font-family: "agave Nerd Font" !important;
+  font-size: 12pt !important;
+}
+
+.disable {
+  color: black !important;
+  background-color: lightgray !important;
+}
+
+.content {
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  opacity: 0;
+  transition: opacity 0.5s ease !important;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.shake-animation {
+  animation: horizontal-shaking 0.35s 1;
+}
+
+.shake-animation-long {
+  animation: horizontal-shaking 0.35s 10;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.nickname {
+  text-align: center;
+}
+
+.nickname img {
+  height: 256px;
+  width: 256px;
+  border-radius: 50%;
+  border: 2px solid orange;
+  transition:
+    border-radius 0.5s ease,
+    background-image 0.5s ease,
+    opacity 0.5s ease,
+    box-shadow 0.5s ease;
+  box-shadow: 0 0 20px rgba(var(--menu-color), 0);
+}
+
+.nickname img:hover {
+  border-radius: 25%;
+  box-shadow: 0 0 10px rgba(var(--box-shadow-color), 0.5);
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  bottom: 0;
+  text-align: center;
+  vertical-align: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(var(--menu-color), 0.7);
+  transition:
+    background-color 0.5s ease,
+    opacity 0.5s ease !important;
+}
+
+.menu-icon {
+  font-size: 16pt;
+}
+
+.select {
+  user-select: text !important;
+}
+
+@media (max-width: 1200px) {
+  .menu-text {
+    display: none;
+  }
+
+  .menu-icon {
+    font-size: 35pt;
+  }
+
+  .menu {
+    padding-top: 10px;
+  }
+  
+  .menu button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 15pt;
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wave-center {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  transition: opacity 1s ease !important;
+  opacity: 0;
+}
+
+.wave {
+  visibility: hidden;
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg,
+      var(--primary-wave),
+      var(--secondary-wave));
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    visibility: visible;
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    visibility: visible;
+    transform: scale(0);
+  }
+}

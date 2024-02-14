@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title_about'|trans }}{% endblock %}
+
+{% block body %}
+  <div class="nickname">
+    <h1>{{ 'about'|trans }} </h1>
+  </div>
+  <section id="about">
+    <h2>{{ 'about'|trans }} </h2>
+    <p>{{ 'about_favourite'|trans }}:</p>
+    <ul>
+      <li>Python 󰌠,</li>
+      <li>C/C++ ,</li>
+      <li>HTML ,</li>
+      <li>CSS .</li>
+    </ul>
+    <p>{{ 'about2'|trans }}</p>
+    <p>{{ 'about3'|trans }}</p>
+    <p>{{ 'about4'|trans }}</p>
+    <p>{{ 'about5'|trans }}</p>
+  </section>
+  <section id="cert_and_courses">
+    <h2>{{ 'cert'|trans }} 󰈙</h2>
+    <p>{{ 'cert1'|trans }}</p>
+    <p>{{ 'cert2'|trans }}:
+    <li>{{ 'e12'|trans }}</li>
+    <li>{{ 'e13'|trans }}</li>
+    <li>{{ 'e14'|trans }}</li>
+    </p>
+    <p>{{ 'cert3'|trans }}</p>
+    <p>{{ 'cert4'|trans }}</p>
+    <p>{{ 'cert5'|trans }}</p>
+  </section>
+  <section id="portfolio">
+    <h2>{{ 'portfolio'|trans }} 󱪇</h2>
+    <p>{{ 'portfolio1'|trans }}</p>
+  </section>
+  <div class="nickname">
+    <h3><a href="javascript:delay('{{ path('app_home') }}')">{{ 'go_back_home'|trans }}</a><h3>
+  </div>
+{% endblock %}

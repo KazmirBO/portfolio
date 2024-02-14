@@ -1,0 +1,40 @@
+# Other
+read_more: Czytaj więcej...
+theme: Przełącz motyw
+go_back_about: Wróć do O mnie...
+go_back_home: Wróć do Strony głównej...
+source_code: Kod źródłowy
+made_by: Stworzone przez
+powered_by: Istnieje dzięki
+primary: Główny
+secondary: Zapasowy
+
+# HOME
+title_home: Strona główna
+
+# CONTACT
+title_contact: Kontakt
+
+# ABOUT
+title_about: O mnie
+about1: Jestem studentem informatyki. Interesuję się językami programowania C/C++ i Python, a także językami HTML i CSS. Posiadam szeroką wiedzę na temat systemu GNU/Linux, którego używam na codzień.
+about_favourite: Moje ulubione języki to
+about2: Znam się na frameworku Symfony i wykorzystuję go do tworzenia stron internetowych.
+about3: Na codzień pracuję na systemie GNU/Linux. I use Arch, BTW... 󰣇
+about4: W przyszłości aspiruję do dalszego rozwoju zawodowego w dziedzinie programowania, tworząc innowacyjne i przydatne rozwiązania.
+about5: Programowanie to dla mnie nie tylko praca; to źródło wielkiej przyjemności. Czerpię satysfakcję z pomagania przyjaciołom w rozwiązywaniu problemów związanych z IT, a moje cele życiowe obejmują stworzenie aplikacji, która zdobędzie popularność i uznanie w moim kraju.
+
+# CERT
+cert: Certyfikaty
+cert1: Dział "Certyfikaty" podsumowuje moje zawodowe osiągnięcia, obejmujące kwalifikacje, certyfikaty oraz kursy.
+cert2: W latach 2018-2020 w Zespole Szkół Technicznych w Chełmie im. gen. Zygmunta Bohusza-Szyszko, otrzymałem
+e12: E.12. Montaż i eksploatacja komputerów osobitych oraz urządzeń peryferyjnych.
+e13: E.13. Projektowanie lokalnych sieci komputerowych i administrowanie sieciami.
+e14: E.14. Tworzenie aplikacji internetowych i baz danych oraz administrowanie bazami.
+cert3: W styczniu 2022 roku uzyskałem certyfikat Cybersecurity Essentials, zorganizowany przez Cisco Networking Academy.
+cert4: W lutym 2022 roku zdobyłem certyfikat CCNAv7 Introduction to Networks, zorganizowany przez Cisco Networking Academy.
+cert5: W maju 2023 roku ukończyłem kurs programowania w języku Python, zorganizowany przez Politechnikę Krakowską.
+
+# PORTFOLIO
+portfolio: Portfolio
+portfolio1: Jeden z moich najbardziej satysfakcjonujących projektów to stworzenie strony internetowej dla klientów firmy meblarskiej. Strona umożliwiała klientom łatwe oglądanie wymiarów i wyglądu wybranych mebli na podstawie zdjęć, co znacznie ułatwiło proces zakupowy.

@@ -1,17 +1,72 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
-
-        {% block javascripts %}
-{% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<html lang="{{ locale }}" style="
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --primary-wave: #090909;
+  --secondary-wave: #909090;
+  --menu-color: 0, 0, 0;
+  --box-shadow-color: 0, 0, 0;
+">
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ asset('/img/icon.jpg') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+{% block stylesheets %}
+{% endblock %}
+    <script src="{{ asset('/js/twemoji.min.js') }}"></script>
+    <script src="{{ asset('/js/script.js') }}"></script>
+    <script src="{{ asset('/js/typeWriter.js') }}"></script>
+    <script src="{{ asset('/js/loadingPage.js') }}"></script>
+    <script src="{{ asset('/js/theme.js') }}"></script>
+    <script src="{{ asset('/js/delayOnClick.js') }}"></script>
+    <script src="{{ asset('/js/nothingSpecial.js') }}"></script>
+{% block javascripts %}
+{% endblock %}
+  </head>
+  <body>
+    <div class="wave-center" id="loading-container">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+      <nav class="menu">
+{% if app.request.attributes.get('_route') != 'app_home' %}
+        <button onclick="javascript:delay('{{ path('app_home') }}')"><span class="menu-text">{{ 'home'|trans }} </span><span class="menu-icon"></span></button>
+{% endif %}
+{% if app.request.attributes.get('_route') != 'app_about' %}
+        <button onclick="javascript:delay('{{ path('app_about') }}')"><span class="menu-text">{{ 'about'|trans }} </span><span class="menu-icon"></span></button>
+{% endif %}
+{% if app.request.attributes.get('_route') != 'app_contact' %}
+        <button onclick="javascript:delay('{{ path('app_contact') }}')"><span class="menu-text">{{ 'contact'|trans }} </span><span class="menu-icon">󰍩</span></button>
+{% endif %}
+        <span class="menu-icon"></span>
+        <button onclick="window.open('https://github.com/KazmirBO', '_blank').focus()"><span class="menu-text">GH </span><span class="menu-icon">󰊤</span></button>
+        <button onclick="window.open('https://www.facebook.com/KazmirBO', '_blank').focus()"><span class="menu-text">FB </span><span class="menu-icon">󰈌</span></button>
+        <span class="menu-icon"></span>
+{% if locale != 'pl' %}
+        <button style="padding: 15px;" onclick="javascript:delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}')"><b>PL</b></button>
+{% endif %}
+{% if locale != 'en' %}
+        <button style="padding: 15px;" onclick="javascript:delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}')"><b>EN</b></button>
+{% endif %}
+        <span class="menu-icon"></span>
+        <button onclick="themeToggle()"><span class="menu-text">{{ 'theme'|trans }} </span><span class="menu-icon">󰔎</span></button>
+      </nav>
+    <div class="content">
+{% block body %}{% endblock %}
+    </div>
+    <div class="footer">
+      <footer>󱤹 Copyleft 2024. <a href="https://github.com/KazmirBO/portfolio" target="_blank" rel="noopener noreferrer">{{ 'source_code'|trans }}</a>.<br>{{ 'made_by'|trans }} <a href="javascript:delay('{{ path('app_home') }}')">Sebastian Kolanowski</a>. {{ 'powered_by'|trans }} <a href="https://symfony.com" target="_blank" rel="noopener noreferrer">Symfony</a>.</footer>
+    </div>
+    <img src="{{ asset('/img/avatar2.png') }}" width="0px" height="0px" alt="Easter egg" />
+  </body>
 </html>

@@ -1,0 +1,43 @@
+# Other
+read_more: Read more...
+theme: Theme Toggle
+go_back_about: Go back to About...
+go_back_home: Go back to Home...
+source_code: Source code
+made_by: Made by
+powered_by: Powered by
+primary: Primary
+secondary: Secondary
+
+# HOME
+title_home: Home
+home: Home
+
+# CONTACT
+title_contact: Contact
+contact: Contact
+
+# ABOUT 
+title_about: About
+about: About
+about1: I am an IT student. I am interested in programming languages C/C++ and Python, as well as HTML and CSS languages. I know a lot about the GNU/Linux system, which I use daily.
+about_favourite: My favorite languages are
+about2: I am familiar with the Symfony framework and use it for web development.
+about3: I operate on the GNU/Linux operating system. Specifically, I use Arch, BTW... 󰣇
+about4: In the future, I aspire to continue my professional growth in the field of programming, developing innovative and useful solutions.
+about5: Programming is not just a job for me; it's a source of great pleasure. I find satisfaction in helping friends solve their IT-related issues, and my life goals involve creating an application that achieves popularity and recognition in my country.
+
+# CERT
+cert: Certifications
+cert1: The "Certifications" section summarizes my professional achievements, including qualifications, certificates, and courses.
+cert2: Between 2018 and 2020 at the Zespół Szkół Technicznych w Chełmie im. gen. Zygmunta Bohusza-Szyszko, I received
+e12: E.12. Assembly and operation of personal computers and external devices.
+e13: E.13. Designing of local domputer networks and network administration.
+e14: E.14. Creation of web applications and databases and database administration.
+cert3: In January 2022, I obtained the Cybersecurity Essentials certificate, organized by Cisco Networking Academy.
+cert4: In February 2022, I acquired the CCNAv7 Introduction to Networks certificate, organized by Cisco Networking Academy.
+cert5: In May 2023, I completed the Python Programming course organized by the Politechnika Krakowska.
+
+# PORTFOLIO
+portfolio: Portfolio
+portfolio1: One of my most satisfying projects involved creating a website for a furniture company's clients. The website allowed customers to easily view dimensions and appearances of selected furniture based on images, significantly streamlining the purchasing process.

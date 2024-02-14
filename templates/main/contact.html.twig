@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title_contact'|trans }}{% endblock %}
+
+{% block body %}
+  <div class="nickname">
+    <h1>{{ 'contact'|trans }} 󰍩</h1>
+  </div>
+  <section id="contact">
+  <h3>E-mail:</h3>
+  <p>{{ 'primary'|trans }}: <a href="mailto:sebastian.kolanowski@op.pl">sebastian.kolanowski@op.pl</a></p>
+  <p>{{ 'secondary'|trans }}: <a href="mailto:sebastian.kolanowski@onet.pl">sebastian.kolanowski@onet.pl</a></p>
+  </section>
+  <div class="nickname">
+    <h3><a href="javascript:delay('{{ path('app_home') }}')">{{ 'go_back_home'|trans }}</a><h3>
+  </div>
+{% endblock %}
