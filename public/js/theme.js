@@ -1,5 +1,4 @@
 function themeToggle() {
-  var r = document.querySelector(":root");
   var currentTheme = getCurrentTheme();
 
   if (currentTheme === "light") setDarkTheme();
@@ -40,12 +39,11 @@ function saveTheme(theme) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  window.matchMedia("(prefers-color-scheme: dark)").addListener((e) => {
-    const newColorScheme = e.matches ? "dark" : "light";
+  var currentTheme = getCurrentTheme();
 
-    if (currentTheme === "light") setDarkTheme();
-    else setLightTheme();
-  });
+  if (currentTheme === "light") {
+    setLightTheme();
+  } else {
+    setDarkTheme();
+  }
 });
-
-
