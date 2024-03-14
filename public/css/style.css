@@ -70,16 +70,26 @@ a {
     color 0.5s ease;
 }
 
+.content {
+  max-width: 900px;
+  display: flex;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  opacity: 0;
+  transition: opacity 0.5s ease !important;
+}
+
 .menu {
+  display: flex;
+  flex-direction: row;
   position: fixed;
   width: 100%;
-  height: 55px;
-  opacity: 0;
+  height: auto;
   backdrop-filter: blur(10px);
   background-color: rgba(var(--menu-color), 0.7);
-  text-align: center;
-  vertical-align: center;
-  padding-top: 10px;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
   transition:
     background-color 0.5s ease,
     opacity 0.5s ease !important;
@@ -93,6 +103,7 @@ a {
     background-color 0.5s ease,
     color 0.5s ease;
   padding: 10px;
+  margin: 5px;
   border-radius: 10px;
   border: 0;
 }
@@ -100,7 +111,6 @@ a {
 .menu button:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
-  text-decoration: none;
 }
 
 .menu-icon {
@@ -116,15 +126,6 @@ a {
 .disable {
   color: black !important;
   background-color: lightgray !important;
-}
-
-.content {
-  max-width: 900px;
-  display: block;
-  margin: 0 auto;
-  padding: 5rem 3rem;
-  opacity: 0;
-  transition: opacity 0.5s ease !important;
 }
 
 .cursor {
@@ -181,6 +182,7 @@ a {
 .footer {
   position: fixed;
   width: 100%;
+  height: auto;
   padding: 10px;
   opacity: 0;
   bottom: 0;
@@ -213,7 +215,7 @@ a {
   .menu {
     padding-top: 10px;
   }
-  
+
   .menu button {
     padding-left: 20px;
     padding-right: 20px;
