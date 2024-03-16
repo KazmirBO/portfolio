@@ -38,7 +38,7 @@ function setLightTheme() {
 // Function to set the dark theme
 function setDarkTheme() {
   // Setting specific colors for the dark theme
-  setTheme("#000000", "#ffffff", "#909090", "#090909", "0, 0, 0");
+  setTheme("#000000", "#f9f9f9", "#909090", "#090909", "0, 0, 0");
 
   // Saving the dark theme to local storage
   saveTheme("dark");

@@ -9,8 +9,8 @@
   <button onclick="javascript:delay('{{ path('app_contact') }}')"><span class="menu-text">{{ 'contact'|trans }} </span><span class="menu-icon">󰍩</span></button>
 {% endif %}
   <span class="menu-icon"></span>
-  <button onclick="window.open('https://github.com/KazmirBO', '_blank').focus()"><span class="menu-text">GH </span><span class="menu-icon">󰊤</span></button>
-  <button onclick="window.open('https://www.facebook.com/KazmirBO', '_blank').focus()"><span class="menu-text">FB </span><span class="menu-icon">󰈌</span></button>
+  <button onclick="window.open('https://github.com/KazmirBO', '_blank').focus()"><span class="menu-text">{{ 'github'|trans }} </span><span class="menu-icon">󰊤</span></button>
+  <button onclick="window.open('https://www.facebook.com/KazmirBO', '_blank').focus()"><span class="menu-text">{{ 'facebook'|trans }} </span><span class="menu-icon">󰈌</span></button>
   <span class="menu-icon"></span>
 {% if locale != 'pl' %}
   <button style="padding: 15px;" onclick="javascript:delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}')"><b>PL</b></button>

@@ -9,6 +9,10 @@ powered_by: Powered by
 primary: Primary
 secondary: Secondary
 
+# MENU
+github: GH
+facebook: FB
+
 # HOME
 title_home: Home
 home: Home

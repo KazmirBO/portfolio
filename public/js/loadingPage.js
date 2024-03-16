@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
       contentContainer.style.opacity = "1";
       menuContainer.style.opacity = "1";
       footerContainer.style.opacity = "1";
-    }, 750);
+    }, 1000);
 
     // Setting a timeout function to check if an element with the ID "text" exists, and if so, execute the "typeWriter" function after a delay of 1000 milliseconds (1 second).
     setTimeout(function () {
       if (document.getElementById("text") !== null) typeWriter(); // Checking if the element with ID "text" exists and executing the "typeWriter" function if it does.
-    }, 1000);
+    }, 1500);
   });
 });

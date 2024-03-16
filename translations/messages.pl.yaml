@@ -9,14 +9,21 @@ powered_by: Istnieje dzięki
 primary: Główny
 secondary: Zapasowy
 
+# MENU
+github: GH
+facebook: FB
+
 # HOME
 title_home: Strona główna
+home: Strona główna
 
 # CONTACT
 title_contact: Kontakt
+contact: Kontakt
 
 # ABOUT
 title_about: O mnie
+about: O mnie
 about1: Jestem studentem informatyki. Interesuję się językami programowania C/C++ i Python, a także językami HTML i CSS. Posiadam szeroką wiedzę na temat systemu GNU/Linux, którego używam na codzień.
 about_favourite: Moje ulubione języki to
 about2: Znam się na frameworku Symfony i wykorzystuję go do tworzenia stron internetowych.

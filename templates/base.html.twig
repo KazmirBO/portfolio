@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ locale }}" style="
   --primary-color: #000000;
-  --secondary-color: #ffffff;
+  --secondary-color: #f9f9f9;
   --primary-wave: #090909;
   --secondary-wave: #909090;
   --menu-color: 0, 0, 0;
@@ -25,6 +25,7 @@
 {% block javascripts %}
 {% endblock %}
   </head>
+{% include "navbar.html.twig" %}
   <body>
     <div class="wave-center" id="loading-container">
       <div class="wave"></div>
@@ -38,10 +39,9 @@
       <div class="wave"></div>
       <div class="wave"></div>
     </div>
-{% include "navbar.html.twig" %}
     <div class="content">
 {% block body %}{% endblock %}
     </div>
-{% include "footer.html.twig" %}
   </body>
+{% include "footer.html.twig" %}
 </html>
