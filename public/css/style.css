@@ -113,6 +113,11 @@ a {
   background-color: var(--secondary-color);
 }
 
+.menu .button-deactivate {
+  background-color: lightgrey !important;
+  color: black !important;
+}
+
 .menu-icon {
   font-family: "agave Nerd Font Mono" !important;
   font-size: 22pt !important;

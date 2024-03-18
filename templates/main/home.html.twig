@@ -4,7 +4,7 @@
 
 {% block body %}
   <div class="nickname">
-    <img onclick="shakeClick()" id="avatar" src={{ asset('/img/avatar.jpg') }} alt="avatar">
+    <img onclick="shakeClick()" id="avatar" src="{{ asset('/img/avatar.jpg') }}" alt="avatar">
     <h1 id="shake"><span id="text"></span><span class="cursor">|</span></h1>
   </div>
   <section id="home">
