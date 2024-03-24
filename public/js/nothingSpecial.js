@@ -1,13 +1,13 @@
 // Variable to keep track of the number of clicks
-var clickCount = 0;
+clickCount = 0;
 
 // Function to handle the shake animation on click
-function shakeClick() {
+function _shakeClick() {
   // Incrementing the click count
   clickCount++;
 
   // Selecting the element to shake
-  var shakeText = document.querySelector("#shake");
+  shakeText = document.querySelector("#shake");
 
   // Adding the shake animation class to the element
   shakeText.classList.add("shake-animation");
@@ -31,7 +31,7 @@ function shakeClick() {
     clickCount = 0;
 
     // Selecting the avatar image
-    var avatarImage = document.querySelector("#avatar");
+    avatarImage = document.querySelector("#avatar");
 
     // Checking if the avatar image exists
     if (avatarImage) {

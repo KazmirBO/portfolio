@@ -4,12 +4,12 @@
 
 {% block body %}
   <div class="nickname">
-    <img onclick="shakeClick()" id="avatar" src="{{ asset('/img/avatar.jpg') }}" alt="avatar">
+    <img onclick="_shakeClick()" id="avatar" src="{{ asset('/img/avatar.jpg') }}" alt="avatar">
     <h1 id="shake"><span id="text"></span><span class="cursor">|</span></h1>
   </div>
   <section id="home">
     <h2>{{ 'about'|trans }} </h2>
     <p>{{ 'about1'|trans }}</p>
-    <p><a href="javascript:delay('{{ path('app_about') }}')"><b>{{ 'read_more'|trans }}</b></a></p>
+    <p><a href="javascript:_delay('{{ path('app_about') }}')"><b>{{ 'read_more'|trans }}</b></a></p>
   </section>
 {% endblock %}

@@ -5,10 +5,10 @@ const txt = "Sebastian Kolanowski";
 const speed = 50;
 
 // Variable to keep track of the current iteration of typing
-var iteration = 0;
+iteration = 0;
 
 // Variable to track whether typing is currently in progress
-var isTyping = false;
+isTyping = false;
 
 // Function to simulate typing out the text
 function typeWriter() {

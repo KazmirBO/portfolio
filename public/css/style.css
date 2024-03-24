@@ -7,6 +7,9 @@
   --secondary-wave: #909090;
   --menu-color: 0, 0, 0;
   --box-shadow-color: 0, 0, 0;
+  --avatar-border: orange;
+  --button-deactivate: lightgrey;
+  --hyper-hover: orange;
 }
 
 @font-face {
@@ -51,6 +54,7 @@ section {
 section {
   padding-top: 50px;
   margin-bottom: 150px;
+  font-family: "agave Nerd Font Mono" !important;
 }
 
 p {
@@ -70,6 +74,10 @@ a {
     color 0.5s ease;
 }
 
+footer a:hover {
+  color: var(--hyper-hover);
+}
+
 .content {
   max-width: 900px;
   display: flex;
@@ -85,7 +93,24 @@ a {
   position: fixed;
   width: 100%;
   height: auto;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  background-color: rgba(var(--menu-color), 0.7);
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.5s ease,
+    opacity 0.5s ease !important;
+}
+
+.responsive-menu {
+  display: none;
+  flex-direction: row;
+  position: fixed;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  backdrop-filter: blur(8px);
   background-color: rgba(var(--menu-color), 0.7);
   opacity: 0;
   align-items: center;
@@ -96,41 +121,41 @@ a {
 }
 
 .menu button {
+  font-size: 13pt;
+}
+
+.responsive-menu button {
+  font-size: 15pt;
+}
+
+.menu button,
+.responsive-menu button {
   background-color: rgba(var(--menu-color), 0);
   color: var(--secondary-color);
   text-decoration: none;
   transition:
-    background-color 0.5s ease,
-    color 0.5s ease;
-  padding: 10px;
-  margin: 5px;
+    background-color 0.3s ease,
+    color 0.3s ease;
+  padding: 12px;
+  margin: 8px;
   border-radius: 10px;
   border: 0;
+  font-family: "agave Nerd Font Mono" !important;
 }
 
-.menu button:hover {
+.menu button:hover,
+.responsive-menu button:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
 
-.menu .button-deactivate {
-  background-color: lightgrey !important;
-  color: black !important;
-}
-
-.menu-icon {
-  font-family: "agave Nerd Font Mono" !important;
-  font-size: 22pt !important;
-}
-
-.menu-text {
-  font-family: "agave Nerd Font" !important;
-  font-size: 12pt !important;
-}
-
 .disable {
   color: black !important;
-  background-color: lightgray !important;
+  background-color: var(--button-deactivate) !important;
+}
+
+.icon {
+  font-size: 16pt !important;
 }
 
 .cursor {
@@ -170,7 +195,7 @@ a {
   height: 256px;
   width: 256px;
   border-radius: 50%;
-  border: 2px solid orange;
+  border: 2px solid var(--avatar-border);
   transition:
     border-radius 0.5s ease,
     background-image 0.5s ease,
@@ -200,37 +225,8 @@ a {
     opacity 0.5s ease !important;
 }
 
-.menu-icon {
-  font-size: 16pt;
-}
-
 .select {
   user-select: text !important;
-}
-
-@media (max-width: 1200px) {
-  .menu-text {
-    display: none;
-  }
-
-  .menu-icon {
-    font-size: 35pt;
-  }
-
-  .menu {
-    padding-top: 10px;
-  }
-
-  .menu button {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media (max-width: 900px) {
-  body {
-    font-size: 15pt;
-  }
 }
 
 @keyframes horizontal-shaking {
@@ -328,5 +324,15 @@ a {
   100% {
     visibility: visible;
     transform: scale(0);
+  }
+}
+
+@media (max-width: 920px) {
+  .menu {
+    display: none;
+  }
+
+  .responsive-menu {
+    display: flex;
   }
 }

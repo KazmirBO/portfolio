@@ -1,34 +1,47 @@
 <nav class="menu">
 {% if app.request.attributes.get('_route') != 'app_home' %}
-  <button onclick="javascript:delay('{{ path('app_home') }}')"><span class="menu-text">{{ 'home'|trans }} </span><span class="menu-icon"></span></button>
+  <button onclick="javascript:_delay('{{ path('app_home') }}')">{{ 'home'|trans }}  </button>
 {% else %}
-  <button class="button-deactivate"><span class="menu-text">{{ 'home'|trans }} </span><span class="menu-icon"></span></button>
+  <button class="disable">{{ 'home'|trans }}  </button>
 {% endif %}
 {% if app.request.attributes.get('_route') != 'app_about' %}
-  <button onclick="javascript:delay('{{ path('app_about') }}')"><span class="menu-text">{{ 'about'|trans }} </span><span class="menu-icon"></span></button>
+  <button onclick="javascript:_delay('{{ path('app_about') }}')">{{ 'about'|trans }}  </button>
 {% else %}
-  <button class="button-deactivate"><span class="menu-text">{{ 'about'|trans }} </span><span class="menu-icon"></span></button>
+  <button class="disable">{{ 'about'|trans }}  </button>
 {% endif %}
 {% if app.request.attributes.get('_route') != 'app_contact' %}
-  <button onclick="javascript:delay('{{ path('app_contact') }}')"><span class="menu-text">{{ 'contact'|trans }} </span><span class="menu-icon">󰍩</span></button>
+  <button onclick="javascript:_delay('{{ path('app_contact') }}')">{{ 'contact'|trans }} 󰍩 </button>
 {% else %}
-  <button class="button-deactivate"><span class="menu-text">{{ 'contact'|trans }} </span><span class="menu-icon">󰍩</span></button>
+  <button class="disable">{{ 'contact'|trans }} 󰍩 </button>
 {% endif %}
-  <span class="menu-icon"></span>
-  <button onclick="window.open('https://github.com/KazmirBO', '_blank').focus()"><span class="menu-text">{{ 'github'|trans }} </span><span class="menu-icon">󰊤</span></button>
-  <button onclick="window.open('https://www.facebook.com/KazmirBO', '_blank').focus()"><span class="menu-text">{{ 'facebook'|trans }} </span><span class="menu-icon">󰈌</span></button>
-  <span class="menu-icon"></span>
+  
+  <button onclick="window.open('https://github.com/KazmirBO', '_blank').focus()">{{ 'github'|trans }} 󰊤 </button>
+  <button onclick="window.open('https://www.facebook.com/KazmirBO', '_blank').focus()">{{ 'facebook'|trans }} 󰈌 </button>
+  
 {% if locale != 'pl' %}
-  <button style="padding: 15px;" onclick="javascript:delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}')"><b>PL</b></button>
+  <button onclick="javascript:_delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}')"><b>PL</b></button>
 {% else %}
-  <button style="padding: 15px;" class="button-deactivate"><b>PL</b></button>
+  <button class="disable"><b>PL</b></button>
 {% endif %}
 {% if locale != 'en' %}
-  <button style="padding: 15px;" onclick="javascript:delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}')"><b>EN</b></button>
+  <button onclick="javascript:_delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}')"><b>EN</b></button>
 {% else %}
-  <button style="padding: 15px;" class="button-deactivate"><b>EN</b></button>
+  <button class="disable"><b>EN</b></button>
 {% endif %}
-  <span class="menu-icon"></span>
-  <button onclick="themeToggle()"><span class="menu-text">{{ 'theme'|trans }} </span><span class="menu-icon">󰔎</span></button>
+  
+  <button onclick="_themeToggle()">{{ 'theme'|trans }} 󰔎 </button>
 </nav>
 
+<nav class="responsive-menu">
+  <button onclick="javascript:_delay('{{ path('app_home') }}')">  </button>
+  <button onclick="javascript:_delay('{{ path('app_about') }}')">  </button>
+  <button onclick="javascript:_delay('{{ path('app_contact') }}')"> 󰍩 </button>
+  
+  <button onclick="globalThis.open('https://github.com/KazmirBO', '_blank').focus()"> 󰊤 </button>
+  <button onclick="globalThis.open('https://www.facebook.com/KazmirBO', '_blank').focus()"> 󰈌 </button>
+  
+  <button onclick="javascript:_delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'pl'}) }}')"><b>PL</b></button>
+  <button onclick="javascript:_delay('{{ path(app.request.attributes.get('_route'), {'_locale': 'en'}) }}')"><b>EN</b></button>
+  
+  <button onclick="_themeToggle()"> 󰔎 </button>
+</nav>

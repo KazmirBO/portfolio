@@ -1,10 +1,11 @@
-// This event listener waits for the DOM content to be fully loaded before executing the provided function.
+// This event listener waits for the content to be fully loaded before executing the provided function.
 document.addEventListener("DOMContentLoaded", function () {
   // Selecting the loading container and other elements by their IDs or classes.
-  var loadingContainer = document.getElementById("loading-container");
-  var contentContainer = document.querySelector(".content");
-  var menuContainer = document.querySelector(".menu");
-  var footerContainer = document.querySelector(".footer");
+  loadingContainer = document.getElementById("loading-container");
+  contentContainer = document.querySelector(".content");
+  menuContainer = document.querySelector(".menu");
+  resMenuContainer = document.querySelector(".responsive-menu");
+  footerContainer = document.querySelector(".footer");
 
   // Setting a timeout function to gradually fade in the loading container after a delay of 500 milliseconds (0.5 seconds).
   setTimeout(function () {
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 500);
 
   // Adding an event listener for when the window and its dependencies are fully loaded.
-  window.addEventListener("load", function () {
+  globalThis.addEventListener("load", function () {
     // Setting a timeout function to hide the loading container and fade in the content after a delay of 750 milliseconds (0.75 seconds).
     setTimeout(function () {
       loadingContainer.style.display = "none"; // Hiding the loading container.
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contentContainer.style.transition = "opacity 0.5s ease-out";
       contentContainer.style.opacity = "1";
       menuContainer.style.opacity = "1";
+      resMenuContainer.style.opacity = "1";
       footerContainer.style.opacity = "1";
     }, 1000);
 

@@ -1,6 +1,6 @@
 // Function to toggle between light and dark themes
-function themeToggle() {
-  var currentTheme = getCurrentTheme();
+function _themeToggle() {
+  currentTheme = getCurrentTheme();
 
   // If the current theme is light, switch to dark theme; otherwise, switch to light theme
   if (currentTheme === "light") setDarkTheme();
@@ -16,7 +16,7 @@ function setTheme(
   menuColor,
 ) {
   // Selecting the root element of the document
-  var r = document.querySelector(":root");
+  r = document.querySelector(":root");
 
   // Setting custom CSS properties to define the theme colors
   r.style.setProperty("--primary-color", primaryColor);
@@ -56,7 +56,7 @@ function saveTheme(theme) {
 
 // Event listener to set the theme on DOM content load
 document.addEventListener("DOMContentLoaded", function () {
-  var currentTheme = getCurrentTheme();
+  currentTheme = getCurrentTheme();
 
   // Setting the theme based on the current theme retrieved from local storage
   if (currentTheme === "light") {
